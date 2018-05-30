@@ -1,377 +1,281 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title>[Hexo] How to Build a Hexo Blog? | Hexo</title>
 
-<!-- Head tag -->
-<head>
+    <!-- Open Graph -->
+    <meta name="description" content="在這之前，寫Tech Blog一直是沒能觸及的動作。 開始寫前端Code後，發現好多的技術文章都無法滿足自己的寫作邏輯。 或許是我文字理解能力開始漸漸低下，真令人難過QQ。">
+<meta name="keywords" content="Hexo,Tech Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] How to Build a Hexo Blog?">
+<meta property="og:url" content="https://github.com/Semanon/frontlifehexoblog/2018/05/30/Hexo-How-to-Build-a-Hexo-Blog/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在這之前，寫Tech Blog一直是沒能觸及的動作。 開始寫前端Code後，發現好多的技術文章都無法滿足自己的寫作邏輯。 或許是我文字理解能力開始漸漸低下，真令人難過QQ。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-30T07:47:49.199Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Hexo] How to Build a Hexo Blog?">
+<meta name="twitter:description" content="在這之前，寫Tech Blog一直是沒能觸及的動作。 開始寫前端Code後，發現好多的技術文章都無法滿足自己的寫作邏輯。 或許是我文字理解能力開始漸漸低下，真令人難過QQ。">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "John Doe",
+  "url": "https://github.com/Semanon/frontlifehexoblog"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
 
-    <!--Description-->
-    
-        <meta name="description" content="在這之前，寫Tech Blog一直是沒能觸及的動作。
-開始寫前端Code後，發現好多的技術文章都無法滿足自己的寫作邏輯。
-或許是我文字理解能力開始漸漸低下，真令人難過QQ。">
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="John Doe">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="[Hexo] How to Build a Hexo Blog?"/>
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Hexo"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article" />
-    
-
-    <!--Page Cover-->
     
 
-    <meta name="twitter:card" content="summary" />
     
-
-    <!-- Title -->
     
-    <title>[Hexo] How to Build a Hexo Blog? - Hexo</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/frontlifehexoblog/css/style.css">
-
-    <!-- Google Analytics -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
     
-
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/frontlifehexoblog/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-
-<body>
-
-<div class="bg-gradient"></div>
-<div class="bg-pattern"></div>
-
-<!-- Menu -->
-<!--Menu Links and Overlay-->
-<div class="menu-bg">
-    <div class="menu-container">
-        <ul>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/">
-                    Home
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/archives">
-                    Archives
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/about.html">
-                    About
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/tags">
-                    Tags
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/frontlifehexoblog/contact.html">
-                    Contact
-                </a>
-            </li>
-            
-        </ul>
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
     </div>
-</div>
 
-<!--Hamburger Icon-->
-<nav>
-    <a href="#menu"></a>
-</nav>
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
 
-<div class="container">
-
-    <!-- Main Content -->
-    <div class="row">
-    <div class="col-sm-12">
-
-        <!--Title and Logo-->
-        <header>
-    <div class="logo">
-        <a href="/frontlifehexoblog/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
-        
-    </div>
-</header>
-
-        <section class="main">
-            
-<div class="post">
-
-    <div class="post-header">
-        <h1 class="title">
-            <a href="/frontlifehexoblog/2018/05/30/Hexo-How-to-Build-a-Hexo-Blog/">
-                [Hexo] How to Build a Hexo Blog?
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2018-05-30</span>
-            
-            
-            
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>Hexo</h3>
         </div>
     </div>
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/frontlifehexoblog/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">John Doe</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
 
-    <div class="content">
-
-        <!-- Gallery -->
-        
-
-        <!-- Post Content -->
-        <p>在這之前，寫Tech Blog一直是沒能觸及的動作。
-開始寫前端Code後，發現好多的技術文章都無法滿足自己的寫作邏輯。
-或許是我文字理解能力開始漸漸低下，真令人難過QQ。</p>
-<a id="more"></a>
-<p>本篇開始會提到如何以HEXO這個呆灣人寫的Blog Framwork，
-安裝、指令、以及佈署到github的方式。
-除了提供其他人可以參閱以外，也是讓我自己的學習腳步留下痕跡。
-未來有疑惑可以再回顧一下。</p>
-<hr>
-<h1 id="安裝Node-Js"><a href="#安裝Node-Js" class="headerlink" title="安裝Node.Js"></a>安裝Node.Js</h1><p>由於我們需要使用到npm套件管理並安裝Hexo，首先請先安裝nodeJs：
-<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
-<p>若是Mac OS則可以透過Homebrew套件管理來安裝：
-    brew install node</p>
-<p>這樣你就可以在command line使用npm這個指令囉！
-若要確認版本可以使用以下指令：
-    npm -v
-    node -v</p>
-<h1 id="安裝git"><a href="#安裝git" class="headerlink" title="安裝git"></a>安裝git</h1><p>恩~這個應該對於大部分人來說不成問題，但還是稍微提一下。
-git的官方網址:
-<a href="http://git-scm.com/download" target="_blank" rel="noopener">http://git-scm.com/download</a></p>
-<p>Mac OS的使用者可以透過以下指令：
-    brew install git</p>
-<p>安裝好後不要忘了設定你的git喔！
-    git config --global user.name [your name] //Setup your user name
-    git config --global user.email [your mail address] //Setup your e-mail address</p>
-<h1 id="安裝HEXO"><a href="#安裝HEXO" class="headerlink" title="安裝HEXO"></a>安裝HEXO</h1>
-    </div>
-
-    
-
-    
-        <div class="post-tags">
-            <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/frontlifehexoblog/tags/Hexo/">#Hexo</a> <a href="/frontlifehexoblog/tags/Tech-Blog/">#Tech Blog</a>
-        </div>
-    
-
-    <!-- Comments -->
-    
-
-</div>
-        </section>
-
-    </div>
-</div>
-
-
-</div>
-
-<!-- Footer -->
-<div class="push"></div>
-
-<footer class="footer-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
-                <h2>About</h2>
-                <p>
-                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
-                </p>
-            </div>
-            
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
-        <h2>Recent Posts</h2>
-        <ul>
-            
-            <li>
-                <a class="footer-post" href="/frontlifehexoblog/2018/05/30/Hexo-How-to-Build-a-Hexo-Blog/">[Hexo] How to Build a Hex</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/frontlifehexoblog/2018/05/28/hello-world/">Hello World</a>
-            </li>
-            
-        </ul>
-    </div>
-
-
-
-            
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <ul class="list-inline footer-social-icons">
-                    
-                    <li class="list-inline-item">
-                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-github"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://twitter.com/?lang=en">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-facebook"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://dribbble.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-dribbble"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://plus.google.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-google-plus"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://www.behance.net/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-behance"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://500px.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-500px"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="mailto:test@example.com">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="\#">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="footer-copyright">
-                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</footer>
 
-<!-- After footer scripts -->
 
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+</div>
 
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    
+    
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    
 
-<!-- Custom JavaScript -->
-<script src="/frontlifehexoblog/js/main.js"></script>
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        HOME
+    </a>
 
-<!-- Disqus Comments -->
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-Hexo-How-to-Build-a-Hexo-Blog" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    [Hexo] How to Build a Hexo Blog?
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <p>&#x5728;&#x9019;&#x4E4B;&#x524D;&#xFF0C;&#x5BEB;Tech Blog&#x4E00;&#x76F4;&#x662F;&#x6C92;&#x80FD;&#x89F8;&#x53CA;&#x7684;&#x52D5;&#x4F5C;&#x3002;
+&#x958B;&#x59CB;&#x5BEB;&#x524D;&#x7AEF;Code&#x5F8C;&#xFF0C;&#x767C;&#x73FE;&#x597D;&#x591A;&#x7684;&#x6280;&#x8853;&#x6587;&#x7AE0;&#x90FD;&#x7121;&#x6CD5;&#x6EFF;&#x8DB3;&#x81EA;&#x5DF1;&#x7684;&#x5BEB;&#x4F5C;&#x908F;&#x8F2F;&#x3002;
+&#x6216;&#x8A31;&#x662F;&#x6211;&#x6587;&#x5B57;&#x7406;&#x89E3;&#x80FD;&#x529B;&#x958B;&#x59CB;&#x6F38;&#x6F38;&#x4F4E;&#x4E0B;&#xFF0C;&#x771F;&#x4EE4;&#x4EBA;&#x96E3;&#x904E;QQ&#x3002;</p>
+<a id="more"></a>
+<p>&#x672C;&#x7BC7;&#x958B;&#x59CB;&#x6703;&#x63D0;&#x5230;&#x5982;&#x4F55;&#x4EE5;HEXO&#x9019;&#x500B;&#x5446;&#x7063;&#x4EBA;&#x5BEB;&#x7684;Blog Framwork&#xFF0C;
+&#x5B89;&#x88DD;&#x3001;&#x6307;&#x4EE4;&#x3001;&#x4EE5;&#x53CA;&#x4F48;&#x7F72;&#x5230;github&#x7684;&#x65B9;&#x5F0F;&#x3002;
+&#x9664;&#x4E86;&#x63D0;&#x4F9B;&#x5176;&#x4ED6;&#x4EBA;&#x53EF;&#x4EE5;&#x53C3;&#x95B1;&#x4EE5;&#x5916;&#xFF0C;&#x4E5F;&#x662F;&#x8B93;&#x6211;&#x81EA;&#x5DF1;&#x7684;&#x5B78;&#x7FD2;&#x8173;&#x6B65;&#x7559;&#x4E0B;&#x75D5;&#x8DE1;&#x3002;
+&#x672A;&#x4F86;&#x6709;&#x7591;&#x60D1;&#x53EF;&#x4EE5;&#x518D;&#x56DE;&#x9867;&#x4E00;&#x4E0B;&#x3002;</p>
+<hr>
+<h1 id="&#x5B89;&#x88DD;Node-Js"><a href="#&#x5B89;&#x88DD;Node-Js" class="headerlink" title="&#x5B89;&#x88DD;Node.Js"></a>&#x5B89;&#x88DD;Node.Js</h1><p>&#x7531;&#x65BC;&#x6211;&#x5011;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;npm&#x5957;&#x4EF6;&#x7BA1;&#x7406;&#x4E26;&#x5B89;&#x88DD;Hexo&#xFF0C;&#x9996;&#x5148;&#x8ACB;&#x5148;&#x5B89;&#x88DD;nodeJs&#xFF1A;
+<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
+<p>&#x82E5;&#x662F;Mac OS&#x5247;&#x53EF;&#x4EE5;&#x900F;&#x904E;Homebrew&#x5957;&#x4EF6;&#x7BA1;&#x7406;&#x4F86;&#x5B89;&#x88DD;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></p>
+<p>&#x9019;&#x6A23;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5728;command line&#x4F7F;&#x7528;npm&#x9019;&#x500B;&#x6307;&#x4EE4;&#x56C9;&#xFF01;
+&#x82E5;&#x8981;&#x78BA;&#x8A8D;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line">node -v</span><br></pre></td></tr></table></figure></p>
+<h1 id="&#x5B89;&#x88DD;git"><a href="#&#x5B89;&#x88DD;git" class="headerlink" title="&#x5B89;&#x88DD;git"></a>&#x5B89;&#x88DD;git</h1><p>&#x6069;~&#x9019;&#x500B;&#x61C9;&#x8A72;&#x5C0D;&#x65BC;&#x5927;&#x90E8;&#x5206;&#x4EBA;&#x4F86;&#x8AAA;&#x4E0D;&#x6210;&#x554F;&#x984C;&#xFF0C;&#x4F46;&#x9084;&#x662F;&#x7A0D;&#x5FAE;&#x63D0;&#x4E00;&#x4E0B;&#x3002;
+git&#x7684;&#x5B98;&#x65B9;&#x7DB2;&#x5740;:
+<a href="http://git-scm.com/download" target="_blank" rel="noopener">http://git-scm.com/download</a></p>
+<p>Mac OS&#x7684;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x4EE5;&#x4E0B;&#x6307;&#x4EE4;&#xFF1A;<br>    brew install git</p>
+<p>&#x5B89;&#x88DD;&#x597D;&#x5F8C;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x8A2D;&#x5B9A;&#x4F60;&#x7684;git&#x5594;&#xFF01;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name [your name] //Setup your user name</span><br><span class="line">git config --global user.email [your mail address] //Setup your e-mail address</span><br></pre></td></tr></table></figure></p>
+<h1 id="&#x5B89;&#x88DD;HEXO"><a href="#&#x5B89;&#x88DD;HEXO" class="headerlink" title="&#x5B89;&#x88DD;HEXO"></a>&#x5B89;&#x88DD;HEXO</h1>
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2018-05-30T06:55:45.000Z" itemprop="datePublished">2018-05-30</time>
+
+    </span>
+    <span class="post-description-item">
+        
+
+    <span>
+        <i class="tags icon"></i>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/frontlifehexoblog/tags/Hexo/">Hexo</a>
+    </span>
+
+    
+    <span class="ui tiny label">
+        <a href="/frontlifehexoblog/tags/Tech-Blog/">Tech Blog</a>
+    </span>
+
+    
+
+    </span>
+</div>
+
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
+
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
+
+                <a class="ui tiny button disabled"><i class="angle left icon"></i>Previous</a>
+
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a href="/frontlifehexoblog/2018/05/28/hello-world/" class="ui tiny button">
+                    
+                    Hello World
+                    
+                    <i class="angle right icon"></i></a>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#安裝Node-Js"><span>安裝Node.Js</span></a></li><li><a href="#安裝git"><span>安裝git</span></a></li><li><a href="#安裝HEXO"><span>安裝HEXO</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2018 <a href="/">John Doe</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
+    </div>
+</div>
+
+    </div>
+
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/frontlifehexoblog/js/semantic-ui-algolia.js"></script>
+
+<script src="/frontlifehexoblog/js/aloha-events.js"></script>
 
 
 
 </body>
-
 </html>
